@@ -1,0 +1,947 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>&#34;契约化急救&#34;制度环境、合法性边界与替代路径研究报告</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+    <style>
+        :root {
+            --primary: #1f2937;
+            --secondary: #6b7280;
+            --accent: #0f766e;
+            --surface: #f9fafb;
+            --text: #111827;
+            --text-muted: #6b7280;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            overflow-x: hidden;
+        }
+        
+        .serif {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #0f766e 0%, #134e4a 100%);
+        }
+        
+        .toc-fixed {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 280px;
+            height: 100vh;
+            background: white;
+            border-right: 1px solid #e5e7eb;
+            z-index: 1000;
+            overflow-y: auto;
+            padding: 2rem 1.5rem;
+        }
+        
+        .main-content {
+            margin-left: 280px;
+            min-height: 100vh;
+        }
+        
+        .citation {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s;
+        }
+        
+        .citation:hover {
+            border-bottom-color: var(--accent);
+        }
+        
+        .card-hover {
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #e5e7eb, transparent);
+            margin: 3rem 0;
+        }
+        
+        @media (max-width: 1024px) {
+            .toc-fixed {
+                display: none;
+            }
+            .main-content {
+                margin-left: 0;
+            }
+        }
+        
+        .chart-container { /* This class might be unused now but kept for potential other non-chart uses if any */
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+    </style>
+  </head>
+
+  <body class="bg-gray-50">
+    <!-- Fixed Table of Contents -->
+    <nav class="toc-fixed">
+      <div class="mb-8">
+        <h3 class="serif text-lg font-semibold text-gray-900 mb-4">目录导航</h3>
+        <div class="space-y-2">
+          <a href="#hero" class="block text-sm text-gray-600 hover:text-teal-700 transition-colors py-1">封面概览</a>
+          <a href="#section-1" class="block text-sm text-gray-600 hover:text-teal-700 transition-colors py-1">一、现行法律制度环境</a>
+          <a href="#section-2" class="block text-sm text-gray-600 hover:text-teal-700 transition-colors py-1">二、学术理论与争议</a>
+          <a href="#section-3" class="block text-sm text-gray-600 hover:text-teal-700 transition-colors py-1">三、典型案例与舆论</a>
+          <a href="#section-4" class="block text-sm text-gray-600 hover:text-teal-700 transition-colors py-1">四、国内外实践数据</a>
+          <a href="#section-5" class="block text-sm text-gray-600 hover:text-teal-700 transition-colors py-1">五、创新替代路径</a>
+          <a href="#conclusion" class="block text-sm text-gray-600 hover:text-teal-700 transition-colors py-1">结论与展望</a>
+        </div>
+      </div>
+
+      <div class="border-t pt-4">
+        <p class="text-xs text-gray-500 mb-2">核心数据</p>
+        <div class="space-y-2 text-xs text-gray-600">
+          <div class="flex justify-between">
+            <span>AED配置目标</span>
+            <span class="font-medium">50台/10万人</span>
+          </div>
+          <div class="flex justify-between">
+            <span>上海AED现状</span>
+            <span class="font-medium">8,190台</span>
+          </div>
+          <div class="flex justify-between">
+            <span>中央财政投入</span>
+            <span class="font-medium">30.18亿元</span>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Hero Section -->
+      <section id="hero" class="hero-gradient text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-20">
+          <img src="https://kimi-web-img.moonshot.cn/img/placeholder-0620/图片7.png" alt="法律天平与医疗急救符号的抽象艺术" class="w-full h-full object-cover" size="wallpaper" aspect="wide" query="法律天平 医疗急救 抽象背景" referrerpolicy="no-referrer" data-modified="1"/>
+        </div>
+
+        <div class="relative z-10 px-4 md:px-8 py-16">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 max-w-7xl mx-auto items-center">
+            <!-- Title Section -->
+            <div class="lg:col-span-7">
+              <div class="mb-6">
+                <span class="inline-block px-3 py-1 bg-white/20 rounded-full text-sm font-medium mb-4">
+                  深度研究报告
+                </span>
+                <h1 class="serif text-3xl sm:text-4xl lg:text-6xl font-bold leading-tight mb-6">
+                  <span class="italic block">&#34;契约化急救&#34;</span>
+                  <span class="block text-xl sm:text-2xl lg:text-3xl font-normal opacity-90 mt-2">
+                    制度环境、合法性边界与替代路径研究
+                  </span>
+                </h1>
+                <p class="text-base sm:text-lg lg:text-xl opacity-90 leading-relaxed">
+                  在《民法典》&#34;好人法&#34;框架下，探索急救服务市场化与公益属性的平衡之道
+                </p>
+              </div>
+            </div>
+
+            <!-- Key Highlights Grid -->
+            <div class="lg:col-span-5">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                  <div class="text-2xl font-bold mb-1">3项</div>
+                  <div class="text-sm opacity-80">核心法律条款</div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                  <div class="text-2xl font-bold mb-1">5种</div>
+                  <div class="text-sm opacity-80">替代路径模式</div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                  <div class="text-2xl font-bold mb-1">8,190台</div>
+                  <div class="text-sm opacity-80">上海AED配置</div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                  <div class="text-2xl font-bold mb-1">30.18亿</div>
+                  <div class="text-sm opacity-80">中央财政投入</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Key Insights -->
+      <div class="px-4 md:px-8 py-8 bg-white border-b">
+        <div class="max-w-5xl mx-auto">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="text-center">
+              <h3 class="serif text-lg font-semibold text-gray-900 mb-2">法律约束显著</h3>
+              <p class="text-sm text-gray-600">《民法典》第184条&#34;自愿实施&#34;前提与有偿约定存在张力</p>
+            </div>
+            <div class="text-center">
+              <h3 class="serif text-lg font-semibold text-gray-900 mb-2">替代路径更优</h3>
+              <p class="text-sm text-gray-600">保险介入、基金保障等模式具有更好制度兼容性</p>
+            </div>
+            <div class="text-center">
+              <h3 class="serif text-lg font-semibold text-gray-900 mb-2">公益属性优先</h3>
+              <p class="text-sm text-gray-600">急救服务应坚持公益性原则，排斥完全市场化</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 1: Legal Framework -->
+      <section id="section-1" class="px-4 md:px-8 py-16 bg-white">
+        <div class="max-w-6xl mx-auto">
+          <header class="mb-12">
+            <h2 class="serif text-4xl font-bold text-gray-900 mb-4">
+              一、现行法律制度环境与合法性边界
+            </h2>
+            <p class="text-xl text-gray-600 leading-relaxed">
+              &#34;契约化急救&#34;在我国现行法律框架下面临显著的合法性约束，核心法律条款为其划定了明确的边界
+            </p>
+          </header>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="serif text-xl font-semibold mb-4 flex items-center">
+                <i class="fas fa-gavel text-teal-600 mr-3"></i>
+                《民法典》核心条款
+              </h3>
+              <div class="space-y-4">
+                <div class="border-l-4 border-teal-500 pl-4">
+                  <h4 class="font-semibold text-gray-900">第184条&#34;好人法&#34;</h4>
+                  <p class="text-sm text-gray-600 mt-1">
+                    以&#34;自愿实施&#34;为前提，有偿约定可能削弱免责保护
+                    <a href="#ref-1" class="citation">[1]</a>
+                  </p>
+                </div>
+                <div class="border-l-4 border-orange-500 pl-4">
+                  <h4 class="font-semibold text-gray-900">第151条显失公平</h4>
+                  <p class="text-sm text-gray-600 mt-1">
+                    为危困状态下签订的协议提供撤销权救济
+                    <a href="#ref-3" class="citation">[3]</a>
+                  </p>
+                </div>
+                <div class="border-l-4 border-red-500 pl-4">
+                  <h4 class="font-semibold text-gray-900">第153条公序良俗</h4>
+                  <p class="text-sm text-gray-600 mt-1">
+                    为急救服务商品化设定效力底线
+                    <a href="#ref-6" class="citation">[6]</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="serif text-xl font-semibold mb-4 flex items-center">
+                <i class="fas fa-stethoscope text-teal-600 mr-3"></i>
+                医疗卫生专门法
+              </h3>
+              <div class="space-y-4">
+                <div class="border-l-4 border-blue-500 pl-4">
+                  <h4 class="font-semibold text-gray-900">《医师法》第27条</h4>
+                  <p class="text-sm text-gray-600 mt-1">
+                    鼓励医师参与公共场所急救，但限定&#34;自愿实施&#34;
+                    <a href="#ref-10" class="citation">[10]</a>
+                  </p>
+                </div>
+                <div class="border-l-4 border-purple-500 pl-4">
+                  <h4 class="font-semibold text-gray-900">《基本医疗卫生与健康促进法》</h4>
+                  <p class="text-sm text-gray-600 mt-1">
+                    确立急救中心&#34;不得因未付费而拒绝服务&#34;原则
+                    <a href="#ref-12" class="citation">[12]</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Legal Framework Comparison Table -->
+          <div class="bg-white rounded-lg border p-6 mb-8">
+            <h3 class="serif text-xl font-semibold mb-4">核心法律条款对比分析</h3>
+            <div class="overflow-x-auto">
+              <table class="w-full text-sm">
+                <thead class="bg-gray-50">
+                  <tr>
+                    <th class="px-4 py-3 text-left font-medium text-gray-900">条款</th>
+                    <th class="px-4 py-3 text-left font-medium text-gray-900">核心内容</th>
+                    <th class="px-4 py-3 text-left font-medium text-gray-900">对契约化急救的影响</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-200">
+                  <tr>
+                    <td class="px-4 py-3 font-medium text-teal-600">第184条</td>
+                    <td class="px-4 py-3 text-gray-600">自愿紧急救助免责</td>
+                    <td class="px-4 py-3 text-gray-600">&#34;自愿&#34;是否包含有偿约定存在解释空间</td>
+                  </tr>
+                  <tr>
+                    <td class="px-4 py-3 font-medium text-orange-600">第151条</td>
+                    <td class="px-4 py-3 text-gray-600">显失公平可撤销</td>
+                    <td class="px-4 py-3 text-gray-600">危困状态下协议极易触发撤销权</td>
+                  </tr>
+                  <tr>
+                    <td class="px-4 py-3 font-medium text-red-600">第153条</td>
+                    <td class="px-4 py-3 text-gray-600">违背公序良俗无效</td>
+                    <td class="px-4 py-3 text-gray-600">生命健康权商品化可能触及效力底线</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Case Study -->
+          <div class="bg-gradient-to-r from-teal-50 to-blue-50 rounded-lg p-6 mb-8">
+            <h3 class="serif text-xl font-semibold mb-4 flex items-center">
+              <i class="fas fa-balance-scale text-teal-600 mr-3"></i>
+              司法实践警示
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <h4 class="font-semibold text-gray-900 mb-2">齐某某诉孙某某案</h4>
+                <p class="text-sm text-gray-600">
+                  法院认定药店经营者的心肺复苏救助行为符合&#34;好人法&#34;免责条件，但该案中救助人与受助人之间<strong>未成立有偿合同关系</strong>
+                  <a href="#ref-39" class="citation">[39]</a>
+                </p>
+              </div>
+              <div>
+                <h4 class="font-semibold text-gray-900 mb-2">&#34;黑救护&#34;车辆交易案</h4>
+                <p class="text-sm text-gray-600">
+                  法院认定相关交易行为&#34;违背公序良俗，损害社会公共利益&#34;，判决合同无效
+                  <a href="#ref-8" class="citation">[8]</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- Section 2: Academic Research -->
+      <section id="section-2" class="px-4 md:px-8 py-16 bg-gray-50">
+        <div class="max-w-6xl mx-auto">
+          <header class="mb-12">
+            <h2 class="serif text-4xl font-bold text-gray-900 mb-4">
+              二、学术文献与理论框架
+            </h2>
+            <p class="text-xl text-gray-600 leading-relaxed">
+              学界对&#34;急救市场化&#34;、&#34;激励相容&#34;、&#34;医疗伦理商品化&#34;等核心争议已形成丰富的理论研究成果
+            </p>
+          </header>
+
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+            <!-- Legal Studies -->
+            <div class="bg-white rounded-lg p-6 shadow-sm">
+              <div class="flex items-center mb-4">
+                <i class="fas fa-book-open text-blue-600 text-xl mr-3"></i>
+                <h3 class="serif text-lg font-semibold">法学交叉研究</h3>
+              </div>
+              <div class="space-y-3 text-sm">
+                <p class="text-gray-600">
+                  <strong>好意施惠说 vs 合同关系说</strong>：紧急救助行为的法律性质界定争议
+                  <a href="#ref-26" class="citation">[26]</a>
+                </p>
+                <p class="text-gray-600">
+                  显失公平认定需同时满足<strong>主观要件</strong>与<strong>客观要件</strong>，急救场景极易触发撤销权
+                  <a href="#ref-28" class="citation">[28]</a>
+                </p>
+              </div>
+            </div>
+
+            <!-- Public Management -->
+            <div class="bg-white rounded-lg p-6 shadow-sm">
+              <div class="flex items-center mb-4">
+                <i class="fas fa-chart-line text-green-600 text-xl mr-3"></i>
+                <h3 class="serif text-lg font-semibold">公共管理视角</h3>
+              </div>
+              <div class="space-y-3 text-sm">
+                <p class="text-gray-600">
+                  急救服务具有<strong>非排他性、外部性、信息不对称</strong>等公共产品特征
+                  <a href="#ref-31" class="citation">[31]</a>
+                </p>
+                <p class="text-gray-600">
+                  疾病应急救助基金为无力支付患者提供兜底保障
+                  <a href="#ref-32" class="citation">[32]</a>
+                </p>
+              </div>
+            </div>
+
+            <!-- Medical Ethics -->
+            <div class="bg-white rounded-lg p-6 shadow-sm">
+              <div class="flex items-center mb-4">
+                <i class="fas fa-heart text-red-600 text-xl mr-3"></i>
+                <h3 class="serif text-lg font-semibold">医学伦理学</h3>
+              </div>
+              <div class="space-y-3 text-sm">
+                <p class="text-gray-600">
+                  <strong>&#34;医者仁心&#34;</strong>是医疗职业精神基石，商品化可能侵蚀价值认同
+                  <a href="#ref-34" class="citation">[34]</a>
+                </p>
+                <p class="text-gray-600">
+                  有偿救助可能加剧社会不平等，违背公益性原则
+                  <a href="#ref-35" class="citation">[35]</a>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- International Comparison -->
+          <div class="bg-white rounded-lg p-6 shadow-sm mb-8">
+            <h3 class="serif text-xl font-semibold mb-6">&#34;好撒玛利亚人法&#34;国际比较</h3>
+            <div class="overflow-x-auto">
+              <table class="w-full text-sm">
+                <thead class="bg-gray-50">
+                  <tr>
+                    <th class="px-4 py-3 text-left font-medium text-gray-900">国家/地区</th>
+                    <th class="px-4 py-3 text-left font-medium text-gray-900">核心特征</th>
+                    <th class="px-4 py-3 text-left font-medium text-gray-900">与契约化急救关联</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-200">
+                  <tr>
+                    <td class="px-4 py-3 font-medium text-blue-600">美国</td>
+                    <td class="px-4 py-3 text-gray-600">各州差异大，普遍强调&#34;自愿&#34;和&#34;无偿&#34;为免责前提</td>
+                    <td class="px-4 py-3 text-gray-600">有偿救助可能超出保护范围</td>
+                  </tr>
+                  <tr>
+                    <td class="px-4 py-3 font-medium text-green-600">德国</td>
+                    <td class="px-4 py-3 text-gray-600">刑法规定救助义务，民法减轻救助人责任</td>
+                    <td class="px-4 py-3 text-gray-600">&#34;强义务+宽豁免&#34;模式</td>
+                  </tr>
+                  <tr>
+                    <td class="px-4 py-3 font-medium text-purple-600">新加坡</td>
+                    <td class="px-4 py-3 text-gray-600">法律保护+培训激励+社会认可综合体系</td>
+                    <td class="px-4 py-3 text-gray-600">政府主导而非市场机制</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- Section 3: Cases and Public Opinion -->
+      <section id="section-3" class="px-4 md:px-8 py-16 bg-white">
+        <div class="max-w-6xl mx-auto">
+          <header class="mb-12">
+            <h2 class="serif text-4xl font-bold text-gray-900 mb-4">
+              三、典型案例与社会舆论
+            </h2>
+            <p class="text-xl text-gray-600 leading-relaxed">
+              司法判例与媒体报道揭示了&#34;契约化急救&#34;面临的现实张力与社会反响
+            </p>
+          </header>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+            <!-- Judicial Cases -->
+            <div class="space-y-6">
+              <h3 class="serif text-2xl font-semibold text-gray-900 mb-6">司法案例类型分析</h3>
+
+              <div class="bg-green-50 rounded-lg p-6 border-l-4 border-green-500">
+                <h4 class="font-semibold text-gray-900 mb-2">施救者责任认定</h4>
+                <p class="text-sm text-gray-600 mb-3">
+                  <strong>齐某某诉孙某某案</strong>：药店经营者实施心肺复苏造成肋骨骨折，法院适用&#34;好人法&#34;判决免责
+                  <a href="#ref-39" class="citation">[39]</a>
+                </p>
+                <div class="text-xs text-green-700 bg-green-100 px-3 py-2 rounded">
+                  典型意义：未成立有偿合同关系，第184条适用前提清晰
+                </div>
+              </div>
+
+              <div class="bg-orange-50 rounded-lg p-6 border-l-4 border-orange-500">
+                <h4 class="font-semibold text-gray-900 mb-2">显失公平撤销</h4>
+                <p class="text-sm text-gray-600 mb-3">
+                  <strong>工伤赔偿协议案</strong>：务工者急需医疗费签订远低于法定标准的赔偿协议，法院认定显失公平予以撤销
+                  <a href="#ref-41" class="citation">[41]</a>
+                </p>
+                <div class="text-xs text-orange-700 bg-orange-100 px-3 py-2 rounded">
+                  警示意义：危困状态下协议极易触发撤销权
+                </div>
+              </div>
+
+              <div class="bg-red-50 rounded-lg p-6 border-l-4 border-red-500">
+                <h4 class="font-semibold text-gray-900 mb-2">非法行医边界</h4>
+                <p class="text-sm text-gray-600 mb-3">
+                  <strong>&#34;医生高铁救人被索要医师证&#34;事件</strong>：医师非执业地点急救的合法性边界模糊
+                  <a href="#ref-45" class="citation">[45]</a>
+                </p>
+                <div class="text-xs text-red-700 bg-red-100 px-3 py-2 rounded">
+                  争议焦点：营利性急救可能触及违规执业红线
+                </div>
+              </div>
+            </div>
+
+            <!-- Media Reports -->
+            <div class="space-y-6">
+              <h3 class="serif text-2xl font-semibold text-gray-900 mb-6">社会舆论热点</h3>
+
+              <div class="bg-blue-50 rounded-lg p-6 border-l-4 border-blue-500">
+                <h4 class="font-semibold text-gray-900 mb-2">&#34;天价急救费&#34;争议</h4>
+                <p class="text-sm text-gray-600 mb-3">
+                  <strong>700公里收费2.8万元</strong>：救护车长途转院收费事件引发公益期待与市场逻辑冲突
+                  <a href="#ref-46" class="citation">[46]</a>
+                </p>
+                <div class="text-xs text-blue-700 bg-blue-100 px-3 py-2 rounded">
+                  核心争议：&#34;挟生命要价&#34;违背公众对急救服务的公益期待
+                </div>
+              </div>
+
+              <div class="bg-yellow-50 rounded-lg p-6 border-l-4 border-yellow-500">
+                <h4 class="font-semibold text-gray-900 mb-2">AED配置与使用</h4>
+                <p class="text-sm text-gray-600 mb-3">
+                  <strong>&#34;不敢救、不会救&#34;</strong>：AED快速推进与公众使用意愿滞后的双重障碍
+                  <a href="#ref-48" class="citation">[48]</a>
+                </p>
+                <div class="text-xs text-yellow-700 bg-yellow-100 px-3 py-2 rounded">
+                  社会心理：法律责任担忧与技能缺乏制约公众参与
+                </div>
+              </div>
+
+              <div class="bg-purple-50 rounded-lg p-6 border-l-4 border-purple-500">
+                <h4 class="font-semibold text-gray-900 mb-2">医护优先通道</h4>
+                <p class="text-sm text-gray-600 mb-3">
+                  <strong>专业人员社会责任</strong>：公共场所设立医护优先通道引发关于有偿服务预期的讨论
+                </p>
+                <div class="text-xs text-purple-700 bg-purple-100 px-3 py-2 rounded">
+                  伦理困境：有偿服务可能侵蚀医护人员公益形象
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- Section 4: Data and Statistics -->
+      <section id="section-4" class="px-4 md:px-8 py-16 bg-gray-50">
+        <div class="max-w-6xl mx-auto">
+          <header class="mb-12">
+            <h2 class="serif text-4xl font-bold text-gray-900 mb-4">
+              四、国内外实践数据
+            </h2>
+            <p class="text-xl text-gray-600 leading-relaxed">
+              通过量化数据对比，为&#34;契约化急救&#34;提供实践参照与模式选择依据
+            </p>
+          </header>
+
+          <!-- Domestic Data -->
+          <div class="mt-8 bg-white rounded-lg p-6 shadow-sm">
+            <h3 class="serif text-xl font-semibold mb-4">国内AED配置现状</h3>
+            <div class="overflow-x-auto">
+              <table class="w-full text-sm">
+                <thead class="bg-gray-50">
+                  <tr>
+                    <th class="px-4 py-3 text-left font-medium text-gray-900">地区</th>
+                    <th class="px-4 py-3 text-left font-medium text-gray-900">AED配置数量</th>
+                    <th class="px-4 py-3 text-left font-medium text-gray-900">配置密度</th>
+                    <th class="px-4 py-3 text-left font-medium text-gray-900">特色做法</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-200">
+                  <tr>
+                    <td class="px-4 py-3 font-medium text-blue-600">上海市</td>
+                    <td class="px-4 py-3 text-gray-600">8,190台（2025年10月）</td>
+                    <td class="px-4 py-3 text-gray-600">目标50台/10万人</td>
+                    <td class="px-4 py-3 text-gray-600">&#34;AED一张网&#34;平台，与120调度对接</td>
+                  </tr>
+                  <tr>
+                    <td class="px-4 py-3 font-medium text-green-600">山东省</td>
+                    <td class="px-4 py-3 text-gray-600">3,697台（2024年1月）</td>
+                    <td class="px-4 py-3 text-gray-600">约3.6台/10万人</td>
+                    <td class="px-4 py-3 text-gray-600">公共数据开放，腾讯地图接入</td>
+                  </tr>
+                  <tr>
+                    <td class="px-4 py-3 font-medium text-purple-600">海南省行政村</td>
+                    <td class="px-4 py-3 text-gray-600">1,340台</td>
+                    <td class="px-4 py-3 text-gray-600">行政村全覆盖</td>
+                    <td class="px-4 py-3 text-gray-600">全国率先实现行政村卫生室AED全覆盖</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="text-xs text-gray-500 mt-2">
+              数据来源：上海市医疗急救中心、山东省卫健委等公开资料
+              <a href="#ref-49" class="citation">[49]</a>
+              <a href="#ref-51" class="citation">[51]</a>
+            </p>
+          </div>
+
+          <!-- Training Data -->
+          <div class="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div class="bg-white rounded-lg p-6 shadow-sm">
+              <h3 class="serif text-xl font-semibold mb-4">急救培训成效</h3>
+              <div class="space-y-4">
+                <div class="flex justify-between items-center p-3 bg-blue-50 rounded">
+                  <span class="text-gray-700">上海市配套培训人次</span>
+                  <span class="font-bold text-blue-600">83,775人次</span>
+                </div>
+                <div class="flex justify-between items-center p-3 bg-green-50 rounded">
+                  <span class="text-gray-700">红十字基金会项目覆盖城市</span>
+                  <span class="font-bold text-green-600">8个城市</span>
+                </div>
+                <div class="flex justify-between items-center p-3 bg-purple-50 rounded">
+                  <span class="text-gray-700">灵山慈善基金会培训人数</span>
+                  <span class="font-bold text-purple-600">4,000+人</span>
+                </div>
+              </div>
+              <p class="text-xs text-gray-500 mt-4">
+                数据来源：各基金会及政府部门公开报告
+                <a href="#ref-52" class="citation">[52]</a>
+                <a href="#ref-59" class="citation">[59]</a>
+              </p>
+            </div>
+
+            <!-- International Comparison -->
+            <div class="bg-white rounded-lg p-6 shadow-sm">
+              <h3 class="serif text-xl font-semibold mb-4">国际急救响应效率</h3>
+              <div class="space-y-4">
+                <div class="flex justify-between items-center p-3 bg-orange-50 rounded">
+                  <span class="text-gray-700">威尔士NHS响应时间中位数</span>
+                  <span class="font-bold text-orange-600">7-8分钟</span>
+                </div>
+                <div class="flex justify-between items-center p-3 bg-red-50 rounded">
+                  <span class="text-gray-700">威尔士ROSC率</span>
+                  <span class="font-bold text-red-600">20%-25%</span>
+                </div>
+                <div class="flex justify-between items-center p-3 bg-gray-50 rounded">
+                  <span class="text-gray-700">我国部分城市ROSC率</span>
+                  <span class="font-bold text-gray-600">10%-15%</span>
+                </div>
+              </div>
+              <p class="text-xs text-gray-500 mt-4">
+                数据来源：威尔士公共卫生部门、我国卫健委统计数据
+                <a href="#ref-54" class="citation">[54]</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- Section 5: Alternative Solutions -->
+      <section id="section-5" class="px-4 md:px-8 py-16 bg-white">
+        <div class="max-w-6xl mx-auto">
+          <header class="mb-12">
+            <h2 class="serif text-4xl font-bold text-gray-900 mb-4">
+              五、创新方案与替代路径
+            </h2>
+            <p class="text-xl text-gray-600 leading-relaxed">
+              探索超越&#34;双方协议&#34;的多元化解决方案，构建更优的制度安排
+            </p>
+          </header>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+            <!-- Insurance Model -->
+            <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-6">
+              <div class="flex items-center mb-4">
+                <i class="fas fa-shield-alt text-blue-600 text-xl mr-3"></i>
+                <h3 class="serif text-xl font-semibold">保险介入模式</h3>
+              </div>
+              <div class="space-y-4">
+                <div class="bg-white rounded p-4">
+                  <h4 class="font-semibold text-gray-900 mb-2">紧急救助责任险</h4>
+                  <p class="text-sm text-gray-600">
+                    三层保障结构：过失赔偿、人身伤害、诉讼费用
+                    <a href="#ref-55" class="citation">[55]</a>
+                  </p>
+                </div>
+                <div class="bg-white rounded p-4">
+                  <h4 class="font-semibold text-gray-900 mb-2">第三方支付机制</h4>
+                  <p class="text-sm text-gray-600">
+                    探索将专业急救服务纳入医保支付范围
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Fund Guarantee -->
+            <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-lg p-6">
+              <div class="flex items-center mb-4">
+                <i class="fas fa-hand-holding-heart text-green-600 text-xl mr-3"></i>
+                <h3 class="serif text-xl font-semibold">基金保障模式</h3>
+              </div>
+              <div class="space-y-4">
+                <div class="bg-white rounded p-4">
+                  <h4 class="font-semibold text-gray-900 mb-2">政府主导型基金</h4>
+                  <p class="text-sm text-gray-600">
+                    中央财政投入30.18亿元支持县域急救能力建设
+                    <a href="#ref-57" class="citation">[57]</a>
+                  </p>
+                </div>
+                <div class="bg-white rounded p-4">
+                  <h4 class="font-semibold text-gray-900 mb-2">社会慈善基金</h4>
+                  <p class="text-sm text-gray-600">
+                    灵山慈善基金会构建&#34;三位一体&#34;社区急救模式
+                    <a href="#ref-59" class="citation">[59]</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Technology Solutions -->
+            <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg p-6">
+              <div class="flex items-center mb-4">
+                <i class="fas fa-microchip text-purple-600 text-xl mr-3"></i>
+                <h3 class="serif text-xl font-semibold">技术解决方案</h3>
+              </div>
+              <div class="space-y-4">
+                <div class="bg-white rounded p-4">
+                  <h4 class="font-semibold text-gray-900 mb-2">&#34;AED一张网&#34;平台</h4>
+                  <p class="text-sm text-gray-600">
+                    上海构建覆盖全市的智能调度与志愿者响应系统
+                    <a href="#ref-60" class="citation">[60]</a>
+                  </p>
+                </div>
+                <div class="bg-white rounded p-4">
+                  <h4 class="font-semibold text-gray-900 mb-2">急救响应APP</h4>
+                  <p class="text-sm text-gray-600">
+                    &#34;企鹅急救助手&#34;成功救治30例心脏骤停患者
+                    <a href="#ref-63" class="citation">[63]</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Policy Incentives -->
+            <div class="bg-gradient-to-br from-orange-50 to-orange-100 rounded-lg p-6">
+              <div class="flex items-center mb-4">
+                <i class="fas fa-gavel text-orange-600 text-xl mr-3"></i>
+                <h3 class="serif text-xl font-semibold">政策激励建议</h3>
+              </div>
+              <div class="space-y-4">
+                <div class="bg-white rounded p-4">
+                  <h4 class="font-semibold text-gray-900 mb-2">政府购买服务</h4>
+                  <p class="text-sm text-gray-600">
+                    青岛通过购买服务新增55处急救站点
+                    <a href="#ref-67" class="citation">[67]</a>
+                  </p>
+                </div>
+                <div class="bg-white rounded p-4">
+                  <h4 class="font-semibold text-gray-900 mb-2">税收优惠</h4>
+                  <p class="text-sm text-gray-600">
+                    公益性捐赠享受增值税和企业所得税优惠
+                    <a href="#ref-68" class="citation">[68]</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Success Cases -->
+          <div class="bg-gradient-to-r from-teal-50 to-blue-50 rounded-lg p-8 mb-8">
+            <h3 class="serif text-2xl font-semibold text-center mb-8">成功实践案例</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div class="text-center">
+                <div class="bg-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <i class="fas fa-city text-teal-600 text-2xl"></i>
+                </div>
+                <h4 class="font-semibold text-gray-900 mb-2">上海模式</h4>
+                <p class="text-sm text-gray-600">
+                  &#34;AED一张网&#34;平台实现设备查找、导航、呼救、志愿者响应一体化
+                </p>
+              </div>
+              <div class="text-center">
+                <div class="bg-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <i class="fas fa-handshake text-green-600 text-2xl"></i>
+                </div>
+                <h4 class="font-semibold text-gray-900 mb-2">青岛经验</h4>
+                <p class="text-sm text-gray-600">
+                  政府购买服务机制有效扩充急救网络，达到国家标准配置
+                </p>
+              </div>
+              <div class="text-center">
+                <div class="bg-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <i class="fas fa-heart text-red-600 text-2xl"></i>
+                </div>
+                <h4 class="font-semibold text-gray-900 mb-2">灵山慈善</h4>
+                <p class="text-sm text-gray-600">
+                  社区急救小屋模式构建可持续的社会参与机制
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- Conclusion -->
+      <section id="conclusion" class="px-4 md:px-8 py-16 bg-gray-900 text-white">
+        <div class="max-w-6xl mx-auto">
+          <header class="mb-12 text-center">
+            <h2 class="serif text-4xl font-bold mb-4">
+              结论与展望
+            </h2>
+            <p class="text-xl text-gray-300 leading-relaxed max-w-4xl mx-auto">
+              构建政府主导、社会参与、技术赋能、法治保障的现代化急救服务体系
+            </p>
+          </header>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
+            <div>
+              <h3 class="serif text-2xl font-semibold mb-6 text-teal-400">核心发现</h3>
+              <div class="space-y-4 text-gray-300">
+                <p>
+                  <strong class="text-white">法律约束显著：</strong>
+                  《民法典》第184条&#34;自愿实施&#34;要求、第151条显失公平制度、第153条公序良俗原则共同构成约束&#34;契约化急救&#34;的核心规范群。
+                </p>
+                <p>
+                  <strong class="text-white">替代路径更优：</strong>
+                  保险介入、基金保障、技术赋能、政策激励等多元化机制具有更优的制度兼容性，能够有效解决激励、保障和效率问题。
+                </p>
+                <p>
+                  <strong class="text-white">公益属性优先：</strong>
+                  急救服务应坚持公益性原则，政府主导的公共投入模式是当前急救体系建设的主流路径。
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <h3 class="serif text-2xl font-semibold mb-6 text-teal-400">未来展望</h3>
+              <div class="space-y-4 text-gray-300">
+                <p>
+                  <strong class="text-white">制度完善方向：</strong>
+                  扩大疾病应急救助基金覆盖面，开发针对性紧急救助责任险产品，推进智能平台建设。
+                </p>
+                <p>
+                  <strong class="text-white">技术创新应用：</strong>
+                  &#34;AED一张网&#34;平台与急救响应APP的深度整合，区块链存证技术保障救助行为可追溯。
+                </p>
+                <p>
+                  <strong class="text-white">激励机制优化：</strong>
+                  建立医护人员急救服务的职业发展激励机制，形成长期稳定的社会参与氛围。
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Key Recommendations -->
+          <div class="bg-white/10 rounded-lg p-8">
+            <h3 class="serif text-2xl font-semibold text-center mb-8 text-teal-400">政策建议</h3>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+              <div class="text-center">
+                <i class="fas fa-expand-arrows-alt text-3xl text-teal-400 mb-3"></i>
+                <h4 class="font-semibold mb-2">扩大覆盖面</h4>
+                <p class="text-sm text-gray-300">扩大疾病应急救助基金覆盖范围</p>
+              </div>
+              <div class="text-center">
+                <i class="fas fa-shield-alt text-3xl text-teal-400 mb-3"></i>
+                <h4 class="font-semibold mb-2">完善保险体系</h4>
+                <p class="text-sm text-gray-300">开发针对性紧急救助责任险产品</p>
+              </div>
+              <div class="text-center">
+                <i class="fas fa-network-wired text-3xl text-teal-400 mb-3"></i>
+                <h4 class="font-semibold mb-2">智能平台建设</h4>
+                <p class="text-sm text-gray-300">推进&#34;AED一张网&#34;等智能平台建设</p>
+              </div>
+              <div class="text-center">
+                <i class="fas fa-medal text-3xl text-teal-400 mb-3"></i>
+                <h4 class="font-semibold mb-2">激励机制</h4>
+                <p class="text-sm text-gray-300">建立职业发展激励与社会认可体系</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- References -->
+      <section class="px-4 md:px-8 py-12 bg-gray-100">
+        <div class="max-w-6xl mx-auto">
+          <h3 class="serif text-2xl font-semibold text-gray-900 mb-8">参考文献</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-600">
+            <div id="ref-1">[1] <a href="https://www.sina.cn/news/detail/5255120034205883.html" class="citation">民法典第184条&#34;好人法&#34;解读</a>
+            </div>
+            <div id="ref-3">[3] <a href="https://qspfw.moe.gov.cn/html/comsense/20230414/20423.html" class="citation">民法典第151条显失公平条款解释</a>
+            </div>
+            <div id="ref-6">[6] <a href="http://www.dachenglawyer.net/article/3445.html" class="citation">民法典第153条公序良俗原则</a>
+            </div>
+            <div id="ref-8">[8] <a href="http://www.yudu.gov.cn/ydxxxgk/c100259uf/202104/f77e6da087e443b3b4cd345316c8f629.shtml" class="citation">&#34;黑救护&#34;车辆交易合同无效案例</a>
+            </div>
+            <div id="ref-10">[10] <a href="https://baiyin.gov.cn/swsjkw/fdzdgknr/ylws/ylgg/art/2023/art_b7b90b22bb7442c8a4e7596a5b29ea19.html" class="citation">医师法第27条公共场所急救免责</a>
+            </div>
+            <div id="ref-12">[12] <a href="http://www.zgjssw.gov.cn/yaowen/202203/t20220302_7447203.shtml" class="citation">基本医疗卫生与健康促进法第27条</a>
+            </div>
+            <div id="ref-26">[26] <a href="https://www.baiyinqu.gov.cn/XZJDBMDW/bmdw/byqscjdglj/fdzdgknr/xfzwq/art/2025/art_76e01ba5f8444cf9860fbb6e048e96b5.html" class="citation">景光强：好人免责条款评析与适用</a>
+            </div>
+            <div id="ref-28">[28] <a href="http://www.npc.gov.cn/zgrdw/npc/xinwen/2013-10/26/content_1811773.htm" class="citation">最高人民法院显失公平认定标准</a>
+            </div>
+            <div id="ref-31">[31] <a href="https://pdf.hanspub.org/ds2024104_201081153.pdf" class="citation">转型中的中国卫生体系研究报告</a>
+            </div>
+            <div id="ref-32">[32] <a href="https://ybj.hunan.gov.cn/ybj/first113541/firstF/f3113607/202512/t20251211_33867794.html" class="citation">疾病应急救助基金制度</a>
+            </div>
+            <div id="ref-34">[34] <a href="https://m12333.cn/policy/mpyab.html" class="citation">医疗伦理商品化争议分析</a>
+            </div>
+            <div id="ref-35">[35] <a href="https://www.bjrd.gov.cn/rdzl/dfxfgk/dfxfg/202101/t20210106_2200078.html" class="citation">基本医疗卫生与健康促进法第3条</a>
+            </div>
+            <div id="ref-39">[39] <a href="https://wjw.sz.gov.cn/attachment/1/1632/1632211/12428373.pdf" class="citation">齐某某诉孙某某健康权纠纷案判决书</a>
+            </div>
+            <div id="ref-41">[41] <a href="http://www.cnterm.cn/news/tzgg/202511/P020251110547138009045.pdf" class="citation">显失公平工伤赔偿协议案例</a>
+            </div>
+            <div id="ref-45">[45] <a href="https://m.thecover.cn/news_details.html?eid=XStKRAWjVKmH90qSdq8Jkw==" class="citation">医生高铁救人被索要医师证事件</a>
+            </div>
+            <div id="ref-46">[46] <a href="https://m.thepaper.cn/newsDetail_forward_1564532" class="citation">救护车长途转院收费2.8万事件</a>
+            </div>
+            <div id="ref-48">[48] <a href="https://www.cssn.cn/fx/xr/202402/t20240227_5735168.shtml" class="citation">AED配置与使用现状分析</a>
+            </div>
+            <div id="ref-49">[49] <a href="https://yizhe.dmu.edu.cn/data/article/yxyzx/preview/pdf/2010-2A-20.pdf" class="citation">上海市AED配置数据</a>
+            </div>
+            <div id="ref-51">[51] <a href="https://www.thuisoe.tsinghua.edu.cn/upload_files/file/20210210/1612886621612097423.pdf" class="citation">山东省AED设备电子地图</a>
+            </div>
+            <div id="ref-52">[52] <a href="https://iidpf.zuel.edu.cn/srfpxdcz_cn_xshd/srfpxscz_cont_news/details-31915.html" class="citation">上海市急救培训数据</a>
+            </div>
+            <div id="ref-54">[54] <a href="https://www.szlawyers.com/file/upload/20240115/file/20240115170112_5b9135ed655a461190baabb136cc64d4.pdf" class="citation">威尔士NHS急救响应数据</a>
+            </div>
+            <div id="ref-55">[55] <a href="https://www.gzcourt.gov.cn/yqfkdt/ck595/2023/09/20132350362.html" class="citation">医师法关于医疗责任保险规定</a>
+            </div>
+            <div id="ref-57">[57] <a href="https://zhuanlan.zhihu.com/p/539330766" class="citation">中央财政支持县域急救设备配备</a>
+            </div>
+            <div id="ref-59">[59] <a href="https://m.thepaper.cn/wifiKey_detail.jsp?contid=9516974&amp;from=wifiKey" class="citation">灵山慈善基金会急救项目</a>
+            </div>
+            <div id="ref-60">[60] <a href="http://health.people.com.cn/n1/2021/0814/c14739-32193003.html" class="citation">上海&#34;AED一张网&#34;项目</a>
+            </div>
+            <div id="ref-63">[63] <a href="https://www.sohu.com/a/485480937_116237" class="citation">企鹅急救助手救治成功案例</a>
+            </div>
+            <div id="ref-67">[67] <a href="https://tdr.lib.ntu.edu.tw/handle/123456789/59022" class="citation">青岛政府购买急救服务经验</a>
+            </div>
+            <div id="ref-68">[68] <a href="https://news.cnr.cn/native/gd/20231019/t20231019_526456561.shtml" class="citation">急救服务税收优惠政策</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+  
+
+</body></html>
