@@ -14,7 +14,7 @@
 6. 结论与展望
 
 ## 访问方式
-- 在线访问：https://Wx458.github.io/emergency-contract-research/
+- 在线访问：https://wangx458.github.io/emergency-contract-research/
 - 本地运行：直接打开 `index.html` 文件
 
 ## 技术特点
@@ -33,4 +33,4 @@
 供参考研究使用，不构成法律建议。引用时请注明出处。
 
 ## 许可证
-MIT License
+MIT LicenseMIT 许可证
